@@ -44,11 +44,14 @@ np.diag([1, 4])
 E1 = np.array([1,2])
 np.linalg.solve(E, E1) # Ex = E1
 
-
-
 np.zeros(10)
 np.ones((10, 10))
 np.random.random((10, 10)) #uniform distribution
 F = np.random.randn(10, 10) #gaussian distribution - mean: 0, gaussian: 1
 F.mean()
 F.var()
+
+G = np.random.randn(100, 3)
+G1 = np.cov(G.T) #covariance matrix
+np.linalg.eig(G1)
+np.linalg.eigh(G1) #symmetric & Hermitian
